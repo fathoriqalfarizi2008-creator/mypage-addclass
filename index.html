@@ -7,35 +7,35 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="min-h-screen bg-slate-100 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-    <div class="mx-auto max-w-md px-4 py-10 md:max-w-xl md:py-16 lg:grid lg:max w-5xl lg:grid-cols-2 lg:item-start lg:gap-16">
+    <div class="mx-auto grid w-full max-w-5xl grid-cols-1 px-4 py-10 sm:px-6 lg:px-8 md:max-w-xl md:py-16 lg:grid lg:max w-5xl lg:grid-cols-2 lg:item-center lg:gap-16">
         <header class="flex flex-col items-center text-center">
             <img src="foto.jpg" alt="Foto profil Nama Kamu"
                 class="h-28 w-28 rounded-full shadow ring-4 ring-white md:h-28 md:w-28">
             <h1 class="mt-4 text-2xl font-bold md:text-3xl">Fathoriq Alfarizi</h1>
-            <p class="mt-1 text-sm text-emerlad-600">Mahasiswa IT · Belajar web development</p>
+            <p class="mt-1 text-sm text-emerlad-600 dark:text-emerlad-400">Mahasiswa IT · Belajar web development</p>
             <p class="mt-3 max-w-xs text-sm italic text-slate-500">
                 Saya sedang mengikuti Class Coding yaitu Add Class, Saya mengikuti Class ini dengan tujuan mengembangkan kemampuan Coding saya.
             </p>
+
+            <nav aria-label="Media sosial" class="mt-5">
+                <ul class="flex justify-center gap-3">
+                    <li>
+                        <a href="https://github.com/fathoriqalfarizi2008-creator" aria-label="GitHub"
+                            class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-sm ring-1 ring-slate-200 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-rose-600 hover:shadow-lg active:scale-95">🐙</a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/fathoriqalfarizi" aria-label="Instagram"
+                            class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-sm ring-1 ring-slate-200 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-yellow-500 hover:shadow-lg active:scale-95">📸</a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/username" aria-label="LinkedIn"
+                            class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-sm ring-1 ring-slate-200 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-green-500 hover:shadow-lg active:scale-95">💼</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
 
-    <nav aria-label="Media sosial" class="mt-6">
-        <ul class="flex justify-center gap-3">
-            <li>
-                <a href="https://github.com/fathoriqalfarizi2008-creator" aria-label="GitHub"
-                    class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-sm ring-1 ring-slate-200 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-rose-600 hover:shadow-lg active:scale-95">🐙</a>
-            </li>
-            <li>
-                <a href="https://instagram.com/fathoriqalfarizi" aria-label="Instagram"
-                    class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-sm ring-1 ring-slate-200 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-yellow-500 hover:shadow-lg active:scale-95">📸</a>
-            </li>
-            <li>
-                <a href="https://linkedin.com/in/username" aria-label="LinkedIn"
-                    class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-sm ring-1 ring-slate-200 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-green-500 hover:shadow-lg active:scale-95">💼</a>
-            </li>
-        </ul>
-    </nav>
-
-    <main>
+    <main class="mx-auto w-full max-w-md lg:mx-0 lg:max-w-lg"> 
         <h2 class="mt-8 text-sm font-semibold uppercase tracking-wide text-slate-500 lg:mt-0">Link Saya</h2>
         <ul class="mt-3 space-y-3">
              <li> 
@@ -46,25 +46,25 @@
                 </li>
             <li> 
                 <a href="https://example.com/portfolio"
-                     class="flex items-center justify-center gap-3 rounded-xl bg-white px-5 py-4 font-medium text-black shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-rose-700 hover:shadow-lg active:scale-95 text:color-black">
+                     class="flex items-center justify-center gap-3 rounded-xl bg-white px-5 py-4 font-medium text-black shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-rose-700 hover:shadow-lg active:scale-95 text-black">
                         Portofolio
                     </a>
                 </li>
             <li>
                 <a href="https://github.com/username/link-page"
-                     class="flex items-center justify-center gap-3 rounded-xl bg-white px-5 py-4 font-medium text-black shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-rose-700 hover:shadow-lg active:scale-95 text:color-black">
+                     class="flex items-center justify-center gap-3 rounded-xl bg-white px-5 py-4 font-medium text-black shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-rose-700 hover:shadow-lg active:scale-95 text-black">
                         Link Page Ini
                     </a>
                 </li>
             <li>
                 <a href="https://example.com/catatan"
-                     class="flex items-center justify-center gap-3 rounded-xl bg-white px-5 py-4 font-medium text-black shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-rose-700 hover:shadow-lg active:scale-95 text:color-black">
+                     class="flex items-center justify-center gap-3 rounded-xl bg-white px-5 py-4 font-medium text-black shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-rose-700 hover:shadow-lg active:scale-95 text-black">
                         Catatan Kursus
                     </a>
                 </li>
             <li>
                 <a href="mailto:halo@example.com"
-                     class="flex items-center justify-center gap-3 rounded-xl bg-white px-5 py-4 font-medium text-black shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-rose-700 hover:shadow-lg active:scale-95 text:color-black">
+                     class="flex items-center justify-center gap-3 rounded-xl bg-white px-5 py-4 font-medium text-black shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-rose-700 hover:shadow-lg active:scale-95 text-black">
                         Email
                 </a>
              </li>
