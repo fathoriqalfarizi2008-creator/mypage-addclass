@@ -64,3 +64,60 @@ function renderLinks(category) {
 
 // ===== MULAI =====
 renderLinks("semua");
+updateThemeButton();
+
+
+//category
+
+//container elemen filter
+const filterTabs = document.querySelector("#filter-tabs")
+const tabButtons = document.querySelectorAll("#filter-tabs button")
+
+function handleFilterClick(clickedButton) {
+    tabButtons.forEach(function(button) {
+        if(button == clickedButton) {
+            button.setAttribute("aria-pressed", "true")
+        } else {
+            button.setAttribute("aria-pressed", "false")
+        }
+    });
+
+    //link sesuai data category yang di button
+    renderLinks(clickedButton.dataset.category);
+}
+
+//untuk setiap button tambah event listener "click"
+tabButtons.forEach(function(button) {
+    button.addEventListener("click", function () {
+        handleFilterClick(button);
+    });
+});
+
+// ===== TEMA =====
+
+// Menyesuaikan ikon dan label tombol dengan tema yang sedang aktif
+function updateThemeButton() {
+  // Pindahkan selector ke sini agar dicari hanya saat fungsi dipanggil
+  const themeToggle = document.querySelector("#theme-toggle");
+  if (!themeToggle) return; // Mencegah error jika tombol belum dimuat di HTML
+
+  const isDark = document.documentElement.classList.contains("dark");
+
+  if (isDark) {
+    themeToggle.textContent = "☀️";
+    themeToggle.setAttribute("aria-label", "Ganti ke mode terang");
+  } else {
+    themeToggle.textContent = "🌙";
+    themeToggle.setAttribute("aria-label", "Ganti ke mode gelap");
+  }
+}
+
+// Pasang event listener dengan mencari elemennya secara langsung
+const currentToggle = document.querySelector("#theme-toggle");
+if (currentToggle) {
+  currentToggle.addEventListener("click", function () {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("linkpage:theme", isDark ? "dark" : "light");
+    updateThemeButton();
+  });
+}
